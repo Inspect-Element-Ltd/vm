@@ -1,3 +1,5 @@
+//go:build windows
+
 /*
  * Copyright 2024, Inspect Element Ltd <https://echo.ac>.
  *
@@ -8,8 +10,6 @@
  * Last Modified: 11/05/2024 01:15AM (BST)
  * Modified By: Gianluca Oliva <hello@gian.sh>
  */
-
-//go:build windows
 
 package check
 
@@ -98,9 +98,17 @@ var (
 		},
 		"QEMU": {
 			`HKLM\HARDWARE\DEVICEMAP\Scsi\Scsi Port 0\Scsi Bus 0\Target Id 0\Logical Unit Id 0\Identifier`: []string{"QEMU"},
+			`HKLM\HARDWARE\DEVICEMAP\Scsi\Scsi Port 0\Scsi Bus 1\Target Id 0\Logical Unit Id 0\Identifier`: []string{"QEMU"},
+			`HKLM\HARDWARE\DEVICEMAP\Scsi\Scsi Port 0\Scsi Bus 2\Target Id 0\Logical Unit Id 0\Identifier`: []string{"QEMU"},
 			`HKLM\HARDWARE\Description\System\SystemBiosVersion`:                                           []string{"QEMU"},
 			`HKLM\HARDWARE\Description\System\VideoBiosVersion`:                                            []string{"QEMU"},
 			`HKLM\HARDWARE\Description\System\BIOS\SystemManufacturer`:                                     []string{"QEMU"},
+			`HKLM\SOFTWARE\Classes\QGAVSSProvider`:                                                         []string{"QEMU Guest Agent VSS Provider"},
+			`HKLM\SOFTWARE\Microsoft\COM3\SelfReg\QGAVSSProvider`:                                          []string{"QEMU Guest Agent VSS Provider"},
+		},
+		"VirtIO": {
+			`HKLM\SYSTEM\ControlSet001\Services\BALLOON\DisplayName`:     []string{"VirtIO Balloon Service"},
+			`HKLM\SYSTEM\ControlSet001\Services\VirtioFsSvc\DisplayName`: []string{"VirtIO-FS Service"},
 		},
 		"VirtualBox": {
 			`HKLM\HARDWARE\DEVICEMAP\Scsi\Scsi Port 0\Scsi Bus 0\Target Id 0\Logical Unit Id 0\Identifier`: []string{"VBOX"},

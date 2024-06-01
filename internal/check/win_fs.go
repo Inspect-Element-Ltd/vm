@@ -1,3 +1,5 @@
+//go:build windows
+
 /*
  * Copyright 2024, Inspect Element Ltd <https://echo.ac>.
  *
@@ -8,8 +10,6 @@
  * Last Modified: 11/05/2024 01:15AM (BST)
  * Modified By: Gianluca Oliva <hello@gian.sh>
  */
-
-//go:build windows
 
 package check
 
@@ -59,6 +59,23 @@ var (
 			`c:\windows\system32\drivers\vmhgfs.sys`,
 			`c:\windows\system32\drivers\vmx86.sys`,
 			`c:\windows\system32\drivers\hgfs.sys`,
+		},
+		"VirtIO": {
+			`c:\program files\virtio-win\balloon\balloon.sys`,
+			`c:\program files\virtio-win\fwcfg\fwcfg.sys`,
+			`c:\program files\virtio-win\network\netkvm.sys`,
+			`c:\program files\virtio-win\pvpanic\pvpanic.sys`,
+			`c:\program files\virtio-win\qemupciserial\qemupciserial.sys`,
+			`c:\program files\virtio-win\viofs\viofs.sys`,
+			`c:\program files\virtio-win\viogpudo\viogpudo.sys`,
+			`c:\program files\virtio-win\vioinput\vioinput.sys`,
+			`c:\program files\virtio-win\viorng\viorng.sys`,
+			`c:\program files\virtio-win\vioscsi\vioscsi.sys`,
+			`c:\program files\virtio-win\vioserial\vioserial.sys`,
+			`c:\program files\virtio-win\viostor\viostor.sys`,
+		},
+		"QEMU": {
+			`c:\program files\qemu-ga\qemu-ga.exe`,
 		},
 	}
 )

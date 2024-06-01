@@ -1,0 +1,14 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"github.com/Inspect-Element-Ltd/vm/vmdetect"
+	"os"
+)
+
+func main() {
+	fmt.Println(vmdetect.Check())
+	input := bufio.NewScanner(os.Stdin)
+	input.Scan()
+}
